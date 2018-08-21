@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title color="white">Musica Online</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="contenido">
+    <ion-list>
+      
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="btnpags">
+          <ion-icon name={{p.iconos}}></ion-icon> {{p.title}}
+          
+      </button>
+    </ion-list>
+    <hr>
+    <button ion-button color="danger" (click)="openPageLogin()">Iniciar Sesion</button>
+    <button ion-button color="dark" (click)="openPageRegistro()">Registrarse</button>
+    <hr>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

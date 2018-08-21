@@ -1,0 +1,94 @@
+.cabecera{
+    font-style: white;
+}
+.contentinicio{
+   
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+.btnejm{
+    background-image: url("../../assets/imgs/rock.jpg");
+    background-size:100% 100%;
+    height: 20%;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: white;
+    //background-attachment:fixed;
+}
+.btnejm1{
+    background-image: url("../../assets/imgs/pop.jpg");
+    background-size:100% 100%;
+    height: 20%;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: white;
+    //background-attachment:fixed;
+}
+.btnejm2{
+    background-image: url("../../assets/imgs/jazz.jpg");
+    background-size:100% 100%;
+    height: 20%;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: white;
+    //background-attachment:fixed;
+}
+.btnejm3{
+    background-image: url("../../assets/imgs/electronica.jpg");
+    background-size:100% 100%;
+    height: 20%;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: white;
+    //background-attachment:fixed;
+}
+
+
+
+ion-title {
+    color:white;
+}
+
+.toolbar-background {
+    background-color: rgba(33, 33, 33, 0.871);
+    color: white;
+  }
+
+.btnmenu{
+      color: white;
+  }
+.contenido{
+    background-image:url("../../assets/imgs/FondoMetal1.jpg");
+    color: white;
+}
+
+#btnlogin{
+    float: left;
+}
+.slider{
+    width: 90%;
+    height: 55%;    
+    margin: auto;
+}
