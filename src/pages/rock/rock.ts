@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import{CANTANTES} from '../../assets/data/datacantantes';
+import {Cantante} from '../../assets/interface/autor.interface';
+import {DISCOS} from '../../assets/data/dtDiscos';
+import { Discos } from '../../assets/interface/disco.interface';
+import { Musicas } from '../../assets/interface/musica.interface';
+
+
 /**
  * Generated class for the RockPage page.
  *
@@ -15,8 +22,51 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RockPage {
 
+  discos: Discos[]=[];
+
+
+  cantantes:Cantante[]=[];
+  audio:any;
+  cantante:Cantante;
+  canciones:Musicas[]=[];
+  cancion:Musicas;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.cantantes = CANTANTES.slice(0);
+      this.discos = DISCOS.slice(0);
   }
+  retornarDisco(){
+    this.canciones= this.discos[0].canciones.slice(0);
+    return this.canciones;
+  }
+
+  play(canciones: Musicas) {
+    console.log(canciones);
+    if (this.cancion != undefined) {
+      this.audio.pause();
+      this.audio.currentTime = 0;
+      this.cancion.reproduciendo = false;
+      this.audio = undefined;
+
+    }
+    
+    this.cancion = undefined;
+    this.audio = new Audio();
+    this.cancion = canciones;
+    this.audio.src = canciones.audio;
+    this.audio.load();
+    this.audio.play();
+    this.cancion.reproduciendo = true;
+    this.audio.onended = () => this.cancion.reproduciendo = false;
+    //console.log("nuevo");
+    //setTimeout(()=>this.animal.reproduciendo=false,animal.duracion*1000);
+  }
+
+  pause() {
+    this.audio.pause();
+    this.cancion.reproduciendo = false;
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RockPage');

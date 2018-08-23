@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DetailAlbumPage } from '../pages/detail-album/detail-album';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
 import { LoginUsuarioPage } from '../pages/login-usuario/login-usuario';
+import { RockPage } from '../pages/rock/rock';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginUsuarioPage } from '../pages/login-usuario/login-usuario';
     ListPage,
     DetailAlbumPage,
     RegistroUsuarioPage,
-    LoginUsuarioPage
+    LoginUsuarioPage,
+    RockPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { LoginUsuarioPage } from '../pages/login-usuario/login-usuario';
     ListPage,
     DetailAlbumPage,
     RegistroUsuarioPage,
-    LoginUsuarioPage
+    LoginUsuarioPage,
+    RockPage
   ],
   providers: [
     StatusBar,

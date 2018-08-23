@@ -7,6 +7,7 @@ import {Cantante} from '../../assets/interface/autor.interface';
 import {DISCOS} from '../../assets/data/dtDiscos';
 import { Discos } from '../../assets/interface/disco.interface';
 import { Musicas } from '../../assets/interface/musica.interface';
+import { RockPage } from '../rock/rock';
 
 @Component({
   selector: 'page-home',
@@ -118,7 +119,9 @@ export class HomePage {
     },3000);
     //this.slides.slideNext();
   }
-
+  navegarPagina(){
+    this.navCtrl.push(RockPage);
+  }
   
 
 }

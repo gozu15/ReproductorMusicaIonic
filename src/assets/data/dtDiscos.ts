@@ -12,12 +12,7 @@ export const DISCOS=[
                 duracion:250,                
                 reproduciendo: false
             },
-            {
-                nombre:"01 - Something In Your Mouth",                
-                audio:"../../assets/media/01 - Something In Your Mouth.mp3",
-                duracion:250,                
-                reproduciendo: false
-            },
+           
             {
                 nombre:"02 - Burn It To The Ground",                
                 audio:"../../assets/media/02 - Burn It To The Ground.mp3",
@@ -51,6 +46,12 @@ export const DISCOS=[
             {
                 nombre:"07 - Never Gonna Be Alone",                
                 audio:"../../assets/media/07 - Never Gonna Be Alone.mp3",
+                duracion:250,                
+                reproduciendo: false
+            },
+            {
+                nombre:"08 - Shakin' Hands",                
+                audio:"../../assets/media/08 - Shakin' Hands.mp3",
                 duracion:250,                
                 reproduciendo: false
             },
