@@ -6,6 +6,7 @@ import {Cantante} from '../../assets/interface/autor.interface';
 import {DISCOS} from '../../assets/data/dtDiscos';
 import { Discos } from '../../assets/interface/disco.interface';
 import { Musicas } from '../../assets/interface/musica.interface';
+import { AlbunesProvider } from '../../providers/albunes/albunes';
 
 
 /**
@@ -31,10 +32,50 @@ export class RockPage {
   canciones:Musicas[]=[];
   cancion:Musicas;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  url:any;
+  CancionesAlbum:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public provider:AlbunesProvider) {
     this.cantantes = CANTANTES.slice(0);
       this.discos = DISCOS.slice(0);
+    this.url= navParams.get("url");
+    this.obtenerMusicas(this.url);
+      
   }
+
+  obtenerMusicas(urln){
+    var data={url:urln}
+    this.provider.getCanciones(data).subscribe((result:any)=>{
+      this.CancionesAlbum=result.slice(0);
+      console.log(this.CancionesAlbum);
+    }) 
+  }
+
+  reproducirCancion(urln){
+    var data={url:urln}
+    this.provider.getSound(data).subscribe((result:any)=>{
+           console.log(result.musicamp4);
+      
+     /* this.audio = new Audio;
+      this.audio.src=result.musica;*/
+      var a = new Audio(result.musicamp4);
+      a.play();      
+    }) 
+  }
+
+  descargarMusica(urln){
+    var data={url:urln}
+    this.provider.getSound(data).subscribe((result:any)=>{
+           console.log(result.musicamp4);
+      
+     /* this.audio = new Audio;
+      this.audio.src=result.musica;*/
+      var a = new Audio(result.musicamp3);
+      a.play();      
+    }) 
+  }
+
+
   retornarDisco(){
     this.canciones= this.discos[0].canciones.slice(0);
     return this.canciones;

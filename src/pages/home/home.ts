@@ -8,6 +8,8 @@ import {DISCOS} from '../../assets/data/dtDiscos';
 import { Discos } from '../../assets/interface/disco.interface';
 import { Musicas } from '../../assets/interface/musica.interface';
 import { RockPage } from '../rock/rock';
+import { AlbunesProvider } from '../../providers/albunes/albunes';
+import { DiscoNuevo } from '../../assets/interface/discnew.interface';
 
 @Component({
   selector: 'page-home',
@@ -29,7 +31,10 @@ export class HomePage {
   canciones:Musicas[]=[];
   cancion:Musicas;
 
-  constructor(public navCtrl: NavController) {
+  albunesNode:DiscoNuevo[];
+
+
+  constructor(public navCtrl: NavController, public provider:AlbunesProvider) {
     this.initializeItems();
     this.pasarSiguienteSlider();
     this.valor="";
@@ -40,11 +45,23 @@ export class HomePage {
       this.cantantes = CANTANTES.slice(0);
       this.discos = DISCOS.slice(0);
       console.log(this.discos);
+
+    this.getAlbum()
+
+      
     
    
     
     //console.log(CANTANTES);
    
+  }
+
+  getAlbum(){
+    this.provider.getAlbums().subscribe((result:any)=>{
+      this.albunesNode=result.slice(0);
+      console.log(this.albunesNode);
+    }) 
+
   }
 
   retornarDisco(){
@@ -119,8 +136,8 @@ export class HomePage {
     },3000);
     //this.slides.slideNext();
   }
-  navegarPagina(){
-    this.navCtrl.push(RockPage);
+  navegarPagina(albumdt){
+    this.navCtrl.push(RockPage,{url:albumdt});
   }
   
 

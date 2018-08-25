@@ -13,12 +13,15 @@ import { DetailAlbumPage } from '../pages/detail-album/detail-album';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
 import { LoginUsuarioPage } from '../pages/login-usuario/login-usuario';
 import { RockPage } from '../pages/rock/rock';
+import { AlbunesProvider } from '../providers/albunes/albunes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
+   
     DetailAlbumPage,
     RegistroUsuarioPage,
     LoginUsuarioPage,
@@ -27,6 +30,8 @@ import { RockPage } from '../pages/rock/rock';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,7 +46,8 @@ import { RockPage } from '../pages/rock/rock';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AlbunesProvider
   ]
 })
 export class AppModule {}

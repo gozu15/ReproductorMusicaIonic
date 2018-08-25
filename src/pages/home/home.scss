@@ -67,6 +67,125 @@
     color: white;
     //background-attachment:fixed;
 }
+@media (min-width: 640px) {
+   
+        .slideone
+    {
+        background-image: url("../../assets/imgs/evanescence.jpg");
+        background-size:100% 100%;
+        height: 100%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .slidetwo{
+        background-image: url("../../assets/imgs/nickelback.jpg");
+        background-size:100% 100%;
+        height: 100%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidethree{
+        background-image: url("../../assets/imgs/maroon5.jpg");
+        background-size:100% 100%;
+        height: 100%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidefour{
+        background-image: url("../../assets/imgs/marilynmanson.jpg");
+        background-size:100% 100%;
+        height: 100%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidefive{
+        background-image: url("../../assets/imgs/oneokrock.jpg");
+        background-size:100% 100%;
+        height: 100%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidesix{
+        background-image: url("../../assets/imgs/onerepublic.jpg");
+        background-size:100% 100%;
+        height: 100%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 360px) {
+        .slideone
+    {
+        background-image: url("../../assets/imgs/evanescence.jpg");
+        background-size:100% 100%;
+        height: 50%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .slidetwo{
+        background-image: url("../../assets/imgs/nickelback.jpg");
+        background-size:100% 100%;
+        height: 50%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidethree{
+        background-image: url("../../assets/imgs/maroon5.jpg");
+        background-size:100% 100%;
+        height: 50%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidefour{
+        background-image: url("../../assets/imgs/marilynmanson.jpg");
+        background-size:100% 100%;
+        height: 50%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidefive{
+        background-image: url("../../assets/imgs/oneokrock.jpg");
+        background-size:100% 100%;
+        height: 50%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .slidesix{
+        background-image: url("../../assets/imgs/onerepublic.jpg");
+        background-size:100% 100%;
+        height: 50%;
+        width: 50%;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+    }
+}
+
 
 
 
