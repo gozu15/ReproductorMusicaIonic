@@ -5,5 +5,5 @@ npm-debug.log
 .DS_Store
 
 # Paquetes de creacion de node_modules
-package.json
+
 package-lock.json
