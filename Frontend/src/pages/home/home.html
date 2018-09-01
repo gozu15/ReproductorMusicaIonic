@@ -9,7 +9,10 @@
 </ion-header>
 
 <ion-content class="contenido" padding>
-  <div class="slider">
+    
+  
+    <h1>Welcome to the Jungle</h1>
+    <div class="slider">
     <ion-slides>
       <ion-slide class="slideone">
         <!--<div class="contentimg">
@@ -32,19 +35,20 @@
           <!--<img src="../../assets/imgs/onerepublic.jpg">-->
       </ion-slide>
     </ion-slides>
-  </div>
-    
-  <div class="contentinicio">
-      <h2>GENEROS</h2>
-      <button class="btnejm" (click)="navegarPagina()">ROCK</button>  
-      <button class="btnejm1" >POP</button>
-      <button class="btnejm2" >JAZZ</button>
-      <button class="btnejm3" >ELECTRONICA</button>     
     </div>
 
-  <div>
-  <!--<button ion-button secondary (click)="pasarSiguienteSlider()">next</button>-->
+    
+   <!--<div class="contentinicio">
+      <h2>GENEROS</h2>
+      <button class="btnejm" (click)="navegarPagina()">ROCK</button>  
+     <button class="btnejm1" >POP</button>
+      <button class="btnejm2" >JAZZ</button>
+      <button class="btnejm3" >ELECTRONICA</button>   
+    </div> --> 
 
+    <!--<button ion-button secondary (click)="pasarSiguienteSlider()">next</button>-->
+    <img class="imgload" *ngIf="albunesNode==undefined" src="../../assets/imgs/original.gif" >
+    <div *ngIf="albunesNode!=undefined">
       <ion-list *ngIf="valor.length>0">
           <ion-item  *ngFor="let item of items">
           {{ item }}
@@ -52,17 +56,16 @@
       </ion-list>
 
       <ion-list >
-        <ion-item  *ngFor="let album of albunesNode">
-          <div>
-            <img (click)="navegarPagina(album.urlAlbum)" [src]="album.urlImagen" >
-            {{album.nombreAlbum}}
-          </div>
+        <h1>Albums</h1>
+        <ion-item class="itemAlbum"  *ngFor="let album of albunesNode">
+          <div class="contalb">
+              <img (click)="navegarPagina(album.urlAlbum)" [src]="album.urlImagen" >
+          </div> 
+          <div class="contalb">
+              {{album.nombreAlbum}}    
+          </div>                    
+                  
         </ion-item>
-    </ion-list>
-
-    <h3>Ionic Menu Starter</h3>
-
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    </ion-list> 
   </div>
 </ion-content>

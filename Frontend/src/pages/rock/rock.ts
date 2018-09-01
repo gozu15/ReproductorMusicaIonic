@@ -27,7 +27,7 @@ export class RockPage {
 
 
   cantantes:Cantante[]=[];
-  audio:any;
+  
   cantante:Cantante;
   canciones:Musicas[]=[];
   cancion:Musicas;
@@ -35,11 +35,16 @@ export class RockPage {
   url:any;
   CancionesAlbum:any;
 
+  musica:any;
+  audio:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public provider:AlbunesProvider) {
     this.cantantes = CANTANTES.slice(0);
       this.discos = DISCOS.slice(0);
     this.url= navParams.get("url");
     this.obtenerMusicas(this.url);
+    this.audio=new Audio;
+ 
       
   }
 
@@ -54,12 +59,14 @@ export class RockPage {
   reproducirCancion(urln){
     var data={url:urln}
     this.provider.getSound(data).subscribe((result:any)=>{
-           console.log(result.musicamp4);
+      this.musica=result.musicamp3;
+           console.log(result);      
       
-     /* this.audio = new Audio;
-      this.audio.src=result.musica;*/
-      var a = new Audio(result.musicamp4);
-      a.play();      
+      this.audio.src=result.musicamp4;
+      this.audio.play();
+      /*var a = new Audio(result.musicamp4);
+      a.play();    */  
+      
     }) 
   }
 

@@ -19,14 +19,14 @@ export class AlbunesProvider {
   }
 
   getAlbums():Observable<any[]>{
-    return this.http.get<any[]>("http://192.168.10.247:2321/api/musicas");
+    return this.http.get<any[]>("http://localhost:2321/api/musicas");
   }
 
   getCanciones(url):Observable<any[]>{
-    return this.http.post<any[]>("http://192.168.10.247:2321/api/musicas",url,httpOptions)
+    return this.http.post<any[]>("http://localhost:2321/api/musicas",url,httpOptions)
   }
 
   getSound(url):Observable<any[]>{
-    return this.http.post<any[]>("http://192.168.10.247:2321/api/musicas/download",url,httpOptions)
+    return this.http.post<any[]>("http://localhost:2321/api/musicas/download",url,httpOptions)
   }
 }

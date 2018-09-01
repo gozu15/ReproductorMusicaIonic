@@ -6,4 +6,11 @@
     background-color: rgba(114, 114, 114, 0.549);
     color: white;
 }
-.toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+.toolbar-background {
+    background-color: rgba(33, 33, 33, 0.871);
+    color: white;
+  }
+.contenido{
+    background-image:url("../../assets/imgs/FondoMetal1.jpg");
+    color: white;
+}

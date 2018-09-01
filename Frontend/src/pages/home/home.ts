@@ -136,6 +136,7 @@ export class HomePage {
     },3000);
     //this.slides.slideNext();
   }
+  
   navegarPagina(albumdt){
     this.navCtrl.push(RockPage,{url:albumdt});
   }

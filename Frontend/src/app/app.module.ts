@@ -15,6 +15,7 @@ import { LoginUsuarioPage } from '../pages/login-usuario/login-usuario';
 import { RockPage } from '../pages/rock/rock';
 import { AlbunesProvider } from '../providers/albunes/albunes';
 import { HttpClientModule } from '@angular/common/http';
+import { Facebook } from '@ionic-native/facebook';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    
+    IonicModule.forRoot(MyApp),    
     HttpClientModule
   ],
   bootstrap: [IonicApp],
@@ -47,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AlbunesProvider
+    AlbunesProvider,
+    Facebook
   ]
 })
 export class AppModule {}

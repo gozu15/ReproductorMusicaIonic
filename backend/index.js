@@ -1,5 +1,5 @@
 "use strict"
-var mongoose = require("mongoose");
+/*var mongoose = require("mongoose");
 var app = require("./app");
 var port = process.env.port || 2321;
 
@@ -17,4 +17,11 @@ mongoose.connect('mongodb://wilson-pc:wilsonpc123@ds263460.mlab.com:63460/tienda
                 console.log("servidor del api rest en puerto 2321");
             })
         }
-    });
+    });*/
+    var mongoose = require("mongoose");
+    var app = require("./app");
+    var port = process.env.port || 2321;
+
+    app.listen(port, function() {
+        console.log("servidor del api rest en puerto 2321");
+    })

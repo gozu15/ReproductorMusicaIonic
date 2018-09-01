@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 
 @Component({
   selector: 'page-list',
@@ -9,8 +10,9 @@ export class ListPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
+  options ;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor( public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -26,7 +28,18 @@ export class ListPage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
-  }
+    /*public streamingMedia: StreamingMedia
+    let options: StreamingVideoOptions = {
+      successCallback: () => { console.log('Video played') },
+      errorCallback: (e) => { console.log('Error streaming') },
+      orientation: 'landscape',
+      shouldAutoClose: true,
+      controls: false
+    };
+    //playAudio(audioUrl, options)
+    this.streamingMedia.playAudio('https://mp3teca.com/-/aac/96/53213_96.m4a', options);*/
+
+  } 
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!

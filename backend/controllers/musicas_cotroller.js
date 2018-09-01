@@ -97,7 +97,11 @@ function descargarMusicas(req,res){
                 
                res.status(200).send({
                     musicamp4:canciones[0].children[1].attribs.src,
-                    musicamp3:canciones[0].children[3].attribs.src});
+                    musicamp3:canciones[0].children[3].attribs.src,
+                    reproduciendo:0,
+                   
+                });
+                    
                 
             })
         }

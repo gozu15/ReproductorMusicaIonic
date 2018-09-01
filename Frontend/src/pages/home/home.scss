@@ -187,7 +187,9 @@
 }
 
 
-
+.imgload{
+    width: 100%;
+}
 
 ion-title {
     color:white;
@@ -222,4 +224,16 @@ ion-title {
 }
 .contentimg img{
     padding: 10%; 
+}
+
+.itemAlbum{
+    background-color: #5c5c5c51;
+    width: 60%;
+    color: azure;
+    margin: auto;
+}
+.contalb{
+    padding: 10px;
+    text-align: center;
+    
 }
